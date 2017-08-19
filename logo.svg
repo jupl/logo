@@ -7,37 +7,29 @@
   <!-- Theming -->
   <style type="text/css">
     .light {
-      stroke: white;
       fill: white;
-      stop-color: white;
     }
     .dark {
-      stroke: black;
       fill: black;
-      stop-color: black;
     }
     .middle {
       fill: gray;
-      stop-color: gray;
-    }
-    .light:not(.fill), .dark:not(.fill), .balance:not(.fill) {
-      fill: transparent;
     }
   </style>
 
   <!-- Definitions -->
   <defs>
-    <linearGradient id="light-arrow-gradient" x1="0" x2="1" y1="0" y2="0">
-      <stop class="dark" offset="2.5%" />
-      <stop class="light" offset="50%" />
-      <stop class="light" offset="60%" />
-      <stop class="middle" offset="90%" />
+    <linearGradient id="light-arrow-gradient" x1="0" x2="0" y1="1" y2="0">
+      <stop stop-color="black" offset="0%" />
+      <stop stop-color="white" offset="42%" />
+      <stop stop-color="white" offset="64%" />
+      <stop stop-color="black" offset="86%" />
     </linearGradient>
-    <linearGradient id="dark-arrow-gradient" x1="0" x2="0" y1="1" y2="0">
-      <stop class="light" offset="2.5%" />
-      <stop class="dark" offset="50%" />
-      <stop class="dark" offset="60%" />
-      <stop class="middle" offset="90%" />
+    <linearGradient id="dark-arrow-gradient" x1="0" x2="1" y1="0" y2="0">
+      <stop stop-color="black" offset="0%" />
+      <stop stop-color="white" offset="42%" />
+      <stop stop-color="white" offset="64%" />
+      <stop stop-color="black" offset="86%" />
     </linearGradient>
     <clipPath id="light-clip">
       <polygon points="0,0 0,512 512,0" />
@@ -45,6 +37,127 @@
     <clipPath id="dark-clip">
       <polygon points="0,512 512,512 512,0" />
     </clipPath>
+    <mask id="light-grid-mask">
+      <rect
+          x="0%"
+          y="0%"
+          width="100%"
+          height="100%"
+          fill="white"
+          />
+      <rect
+          x="6%"
+          y="6%"
+          width="41%"
+          height="41%"
+          fill="black" />
+      <rect
+          x="53%"
+          y="6%"
+          width="41%"
+          height="41%"
+          fill="black" />
+      <rect
+          x="6%"
+          y="53%"
+          width="41%"
+          height="41%"
+          fill="black" />
+      <polygon
+          fill="black"
+          points="-1,513 513,513 513,-1" />
+      <circle
+          cx="50%"
+          cy="50%"
+          r="4.2426406874%"
+          fill="black"
+          />
+      <rect
+          x="78%"
+          y="-1%"
+          width="23%"
+          height="8%"
+          fill="black"
+          />
+    </mask>
+    <mask id="dark-grid-mask">
+      <rect
+          x="0%"
+          y="0%"
+          width="100%"
+          height="100%"
+          fill="white"
+          />
+      <rect
+          x="53%"
+          y="53%"
+          width="41%"
+          height="41%"
+          fill="black" />
+      <rect
+          x="53%"
+          y="6%"
+          width="41%"
+          height="41%"
+          fill="black" />
+      <rect
+          x="6%"
+          y="53%"
+          width="41%"
+          height="41%"
+          fill="black" />
+      <polygon
+          fill="black"
+          points="-1,-1 -1,513 513,-1"
+          />
+      <circle
+          cx="50%"
+          cy="50%"
+          r="4.2426406874%"
+          fill="black"
+          />
+      <rect
+          x="93%"
+          y="-1%"
+          width="8%"
+          height="23%"
+          fill="black"
+          />
+    </mask>
+    <mask id="light-arrow-mask">
+      <rect
+          x="47%"
+          y="-50%"
+          width="6%"
+          height="200%"
+          fill="white"
+          transform="rotate(45 256 256) translate(64 64)"
+          />
+      <rect
+          x="94%"
+          y="0%"
+          width="6%"
+          height="47%"
+          fill="url(#light-arrow-gradient)"
+          />
+    </mask>
+    <mask id="dark-arrow-mask">
+      <rect
+          x="47%"
+          y="-50%"
+          width="6%"
+          height="200%"
+          fill="white"
+          transform="rotate(45 256 256) translate(-64 -64)"
+          />
+      <rect
+          x="53%"
+          y="0%"
+          width="47%"
+          height="6%"
+          fill="url(#dark-arrow-gradient)"
+          />
+    </mask>
   </defs>
 
   <!-- Background -->
@@ -55,90 +168,32 @@
       />
 
   <g transform="rotate(-45 256 256) scale(0.5) translate(256 256)">
-    <!-- Light squares -->
+    <!-- Grids -->
     <rect
+        width="100%"
+        height="100%"
         class="light"
-        x="2.5%"
-        y="50%"
-        width="47.5%"
-        height="47.5%"
-        stroke-width="5%"
-        clip-path="url(#dark-clip)"
+        mask="url(#light-grid-mask)"
         />
     <rect
+        width="100%"
+        height="100%"
+        class="dark"
+        mask="url(#dark-grid-mask)"
+        />
+
+    <!-- Arrows -->
+    <rect
+        width="100%"
+        height="100%"
         class="light"
-        x="50%"
-        y="50%"
-        width="47.5%"
-        height="47.5%"
-        stroke-width="5%"
+        mask="url(#light-arrow-mask)"
         />
-
-    <!-- Dark squares -->
     <rect
+        width="100%"
+        height="100%"
         class="dark"
-        x="2.5%"
-        y="2.5%"
-        width="47.5%"
-        height="47.5%"
-        stroke-width="5%"
-        clip-path="url(#light-clip)"
-        />
-    <rect
-        class="dark"
-        x="2.5%"
-        y="50%"
-        width="47.5%"
-        height="47.5%"
-        stroke-width="5%"
-        clip-path="url(#light-clip)"
-        />
-
-    <!-- Light arrow -->
-    <g clip-path="url(#light-clip)">
-      <rect
-          class="light fill"
-          x="47.5%"
-          y="-50%"
-          width="5%"
-          height="200%"
-          transform="rotate(45 256 256) translate(-64 -64)"
-          />
-    </g>
-    <rect
-        x="50%"
-        y="0%"
-        width="50%"
-        height="5%"
-        clip-path="url(#light-clip)"
-        fill="url(#light-arrow-gradient)"
-        />
-
-    <!-- Dark arrow -->
-    <g clip-path="url(#dark-clip)">
-      <rect
-          class="dark fill"
-          x="47.5%"
-          y="-50%"
-          width="5%"
-          height="200%"
-          transform="rotate(45 256 256) translate(64 64)"
-          />
-    </g>
-    <rect
-        x="95%"
-        y="0%"
-        width="5%"
-        height="50%"
-        clip-path="url(#dark-clip)"
-        fill="url(#dark-arrow-gradient)"
-        />
-
-    <circle
-        class="middle"
-        cx="50%"
-        cy="50%"
-        r="3.66666666666666666667%"
+        mask="url(#dark-arrow-mask)"
         />
   </g>
 </svg>
