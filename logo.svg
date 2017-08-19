@@ -90,6 +90,14 @@
           height="8%"
           fill="black"
           />
+      <rect
+          x="47%"
+          y="-50%"
+          width="6%"
+          height="88%"
+          fill="white"
+          transform="rotate(-45 256 256) translate(7)"
+          />
       <polygon
           fill="black"
           points="-1,513 513,513 513,-1" />
@@ -146,6 +154,14 @@
           width="8%"
           height="41%"
           fill="black"
+          />
+      <rect
+          x="47%"
+          y="62%"
+          width="6%"
+          height="88%"
+          fill="white"
+          transform="rotate(-45 256 256) translate(7)"
           />
       <polygon
           fill="black"
