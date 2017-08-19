@@ -17,8 +17,8 @@
     }
   </style>
 
-  <!-- Definitions -->
   <defs>
+    <!-- Gradients for arrow -->
     <linearGradient id="light-arrow-gradient" x1="0" x2="0" y1="1" y2="0">
       <stop stop-color="black" offset="0%" />
       <stop stop-color="white" offset="42%" />
@@ -31,12 +31,8 @@
       <stop stop-color="white" offset="64%" />
       <stop stop-color="black" offset="86%" />
     </linearGradient>
-    <clipPath id="light-clip">
-      <polygon points="0,0 0,512 512,0" />
-    </clipPath>
-    <clipPath id="dark-clip">
-      <polygon points="0,512 512,512 512,0" />
-    </clipPath>
+
+    <!-- Grid definitions -->
     <mask id="light-grid-mask">
       <rect
           x="0%"
@@ -168,6 +164,8 @@
           points="-1,-1 -1,513 513,-1"
           />
     </mask>
+
+    <!-- Arrow definitions -->
     <mask id="light-arrow-mask">
       <rect
           x="47%"
@@ -235,33 +233,31 @@
       height="100%"
       />
 
-  <g transform="rotate(-45 256 256) scale(0.5) translate(256 256)">
-    <!-- Grids -->
-    <rect
-        width="100%"
-        height="100%"
-        class="light"
-        mask="url(#light-grid-mask)"
-        />
-    <rect
-        width="100%"
-        height="100%"
-        class="dark"
-        mask="url(#dark-grid-mask)"
-        />
+  <!-- Grids -->
+  <rect
+      width="100%"
+      height="100%"
+      class="light"
+      mask="url(#light-grid-mask)"
+      />
+  <rect
+      width="100%"
+      height="100%"
+      class="dark"
+      mask="url(#dark-grid-mask)"
+      />
 
-    <!-- Arrows -->
-    <rect
-        width="100%"
-        height="100%"
-        class="light"
-        mask="url(#light-arrow-mask)"
-        />
-    <rect
-        width="100%"
-        height="100%"
-        class="dark"
-        mask="url(#dark-arrow-mask)"
-        />
-  </g>
+  <!-- Arrows -->
+  <rect
+      width="100%"
+      height="100%"
+      class="light"
+      mask="url(#light-arrow-mask)"
+      />
+  <rect
+      width="100%"
+      height="100%"
+      class="dark"
+      mask="url(#dark-arrow-mask)"
+      />
 </svg>
