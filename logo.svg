@@ -1,8 +1,8 @@
 <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    width="512"
-    height="512"
+    width="1024"
+    height="1024"
     >
   <!-- Theming -->
   <style type="text/css">
@@ -92,11 +92,11 @@
           width="6%"
           height="88%"
           fill="white"
-          transform="rotate(-45 256 256) translate(7)"
+          transform="rotate(-45 512 512) translate(13)"
           />
       <polygon
           fill="black"
-          points="-1,513 513,513 513,-1" />
+          points="-1,1025 1025,1025 1025,-1" />
     </mask>
     <mask id="dark-grid-mask">
       <rect
@@ -157,11 +157,11 @@
           width="6%"
           height="88%"
           fill="white"
-          transform="rotate(-45 256 256) translate(7)"
+          transform="rotate(-45 512 512) translate(13)"
           />
       <polygon
           fill="black"
-          points="-1,-1 -1,513 513,-1"
+          points="-1,-1 -1,1025 1025,-1"
           />
     </mask>
 
@@ -173,7 +173,7 @@
           width="6%"
           height="200%"
           fill="white"
-          transform="rotate(45 256 256) translate(64 64)"
+          transform="rotate(45 512 512) translate(128 128)"
           />
       <rect
           x="94%"
@@ -202,7 +202,7 @@
           width="6%"
           height="200%"
           fill="white"
-          transform="rotate(45 256 256) translate(-64 -64)"
+          transform="rotate(45 512 512) translate(-128 -128)"
           />
       <rect
           x="53%"
