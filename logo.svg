@@ -6,15 +6,9 @@
     >
   <!-- Theming -->
   <style type="text/css">
-    .light {
-      fill: white;
-    }
-    .dark {
-      fill: black;
-    }
-    .middle {
-      fill: gray;
-    }
+    .light { fill: white }
+    .dark { fill: black }
+    .middle { fill: gray }
   </style>
 
   <defs>
