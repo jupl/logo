@@ -4,24 +4,6 @@
     width="512"
     height="512"
     >
-  <!-- Clipping definitions -->
-  <defs>
-    <linearGradient id="light-arrow-gradient" x1="0" x2="1" y1="0" y2="0">
-      <stop class="dark" offset="0%" />
-      <stop class="light" offset="80%" />
-    </linearGradient>
-    <linearGradient id="dark-arrow-gradient" x1="0" x2="0" y1="0" y2="1">
-      <stop class="dark" offset="20%" />
-      <stop class="light" offset="100%" />
-    </linearGradient>
-    <clipPath id="light-clip">
-      <polygon points="0,0 0,512 512,0" />
-    </clipPath>
-    <clipPath id="dark-clip">
-      <polygon points="0,512 512,512 512,0" />
-    </clipPath>
-  </defs>
-
   <!-- Theming -->
   <style type="text/css">
     .light {
@@ -34,25 +16,53 @@
       fill: black;
       stop-color: black;
     }
-    .light:not(.fill), .dark:not(.fill) {
+    .middle {
+      fill: gray;
+      stop-color: gray;
+    }
+    .light:not(.fill), .dark:not(.fill), .balance:not(.fill) {
       fill: transparent;
     }
   </style>
 
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="light-arrow-gradient" x1="0" x2="1" y1="0" y2="0">
+      <stop class="dark" offset="2.5%" />
+      <stop class="light" offset="50%" />
+      <stop class="light" offset="60%" />
+      <stop class="middle" offset="90%" />
+    </linearGradient>
+    <linearGradient id="dark-arrow-gradient" x1="0" x2="0" y1="1" y2="0">
+      <stop class="light" offset="2.5%" />
+      <stop class="dark" offset="50%" />
+      <stop class="dark" offset="60%" />
+      <stop class="middle" offset="90%" />
+    </linearGradient>
+    <clipPath id="light-clip">
+      <polygon points="0,0 0,512 512,0" />
+    </clipPath>
+    <clipPath id="dark-clip">
+      <polygon points="0,512 512,512 512,0" />
+    </clipPath>
+  </defs>
+
   <!-- Background -->
   <rect
+      class="middle"
       width="100%"
       height="100%"
-      fill="grey"
       />
 
   <g transform="rotate(-45 256 256) scale(0.5) translate(256 256)">
     <!-- Light squares -->
     <rect
         class="light"
-        width="100%"
-        height="100%"
-        stroke-width="10%"
+        x="2.5%"
+        y="50%"
+        width="47.5%"
+        height="47.5%"
+        stroke-width="5%"
         clip-path="url(#dark-clip)"
         />
     <rect
@@ -67,15 +77,19 @@
     <!-- Dark squares -->
     <rect
         class="dark"
-        width="100%"
-        height="100%"
-        stroke-width="10%"
+        x="2.5%"
+        y="2.5%"
+        width="47.5%"
+        height="47.5%"
+        stroke-width="5%"
         clip-path="url(#light-clip)"
         />
     <rect
         class="dark"
-        width="50%"
-        height="50%"
+        x="2.5%"
+        y="50%"
+        width="47.5%"
+        height="47.5%"
         stroke-width="5%"
         clip-path="url(#light-clip)"
         />
@@ -92,9 +106,9 @@
           />
     </g>
     <rect
-        x="52.5%"
+        x="50%"
         y="0%"
-        width="27.5%"
+        width="50%"
         height="5%"
         clip-path="url(#light-clip)"
         fill="url(#light-arrow-gradient)"
@@ -113,11 +127,18 @@
     </g>
     <rect
         x="95%"
-        y="20%"
+        y="0%"
         width="5%"
-        height="27.5%"
+        height="50%"
         clip-path="url(#dark-clip)"
         fill="url(#dark-arrow-gradient)"
+        />
+
+    <circle
+        class="middle"
+        cx="50%"
+        cy="50%"
+        r="3.66666666666666666667%"
         />
   </g>
 </svg>
