@@ -40,19 +40,22 @@
           y="6%"
           width="41%"
           height="41%"
-          fill="black" />
+          fill="black"
+          />
       <rect
           x="53%"
           y="6%"
           width="41%"
           height="41%"
-          fill="black" />
+          fill="black"
+          />
       <rect
           x="6%"
           y="53%"
           width="41%"
           height="41%"
-          fill="black" />
+          fill="black"
+          />
       <circle
           cx="50%"
           cy="50%"
@@ -90,7 +93,8 @@
           />
       <polygon
           fill="black"
-          points="-1,1025 1025,1025 1025,-1" />
+          points="-1,1025 1025,1025 1025,-1"
+          />
     </mask>
     <mask id="dark-grid-mask">
       <rect
@@ -105,19 +109,22 @@
           y="53%"
           width="41%"
           height="41%"
-          fill="black" />
+          fill="black"
+          />
       <rect
           x="53%"
           y="6%"
           width="41%"
           height="41%"
-          fill="black" />
+          fill="black"
+          />
       <rect
           x="6%"
           y="53%"
           width="41%"
           height="41%"
-          fill="black" />
+          fill="black"
+          />
       <circle
           cx="50%"
           cy="50%"
@@ -181,13 +188,15 @@
           y="47%"
           width="50%"
           height="6%"
-          fill="black" />
+          fill="black"
+          />
       <rect
           x="47%"
           y="50%"
           width="6%"
           height="50%"
-          fill="black" />
+          fill="black"
+          />
     </mask>
     <mask id="dark-arrow-mask">
       <rect
@@ -210,13 +219,15 @@
           y="47%"
           width="50%"
           height="6%"
-          fill="black" />
+          fill="black"
+          />
       <rect
           x="47%"
           y="0%"
           width="6%"
           height="50%"
-          fill="black" />
+          fill="black"
+          />
     </mask>
   </defs>
 
