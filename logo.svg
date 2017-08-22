@@ -2,9 +2,17 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     version="1.1"
-    width="1024"
-    height="1024"
+    width="512"
+    height="512"
+    viewBox="0 0 512 512"
     >
+  <!-- Remove to show images -->
+  <style type="text/css">
+    #light-pattern image { visibility: hidden }
+    #dark-pattern image { visibility: hidden }
+    #middle-pattern image { visibility: hidden }
+  </style>
+
   <defs>
     <!-- Background patterns -->
     <pattern
@@ -14,7 +22,6 @@
         height="100%"
         >
       <rect fill="white" width="100%" height="100%" />
-      <!--
       <image
           xlink:href="light.png"
           x="0"
@@ -23,7 +30,6 @@
           height="100%"
           preserveAspectRatio="xMidYMid slice"
           />
-      -->
     </pattern>
     <pattern
         id="dark-pattern"
@@ -32,7 +38,6 @@
         height="100%"
         >
       <rect fill="black" width="100%" height="100%" />
-      <!--
       <image
           xlink:href="dark.png"
           x="0"
@@ -41,7 +46,6 @@
           height="100%"
           preserveAspectRatio="xMidYMid slice"
           />
-      -->
     </pattern>
     <pattern
         id="middle-pattern"
@@ -50,7 +54,6 @@
         height="100%"
         >
       <rect fill="gray" width="100%" height="100%" />
-      <!--
       <image
           xlink:href="middle.png"
           x="0"
@@ -59,7 +62,6 @@
           height="100%"
           preserveAspectRatio="xMidYMid slice"
           />
-      -->
     </pattern>
 
     <!-- Gradients for arrow -->
@@ -143,11 +145,11 @@
           width="8%"
           height="87%"
           fill="white"
-          transform="rotate(-45 512 512) translate(6)"
+          transform="rotate(-45 256 256) translate(3)"
           />
       <polygon
           fill="black"
-          points="-1,1025 1025,1025 1025,-1"
+          points="-1,513 513,513 513,-1"
           />
     </mask>
     <mask id="dark-grid-mask">
@@ -212,11 +214,11 @@
           width="8%"
           height="87%"
           fill="white"
-          transform="rotate(-45 512 512) translate(6)"
+          transform="rotate(-45 256 256) translate(3)"
           />
       <polygon
           fill="black"
-          points="-1,-1 -1,1025 1025,-1"
+          points="-1,-1 -1,513 513,-1"
           />
     </mask>
 
@@ -228,7 +230,7 @@
           width="8%"
           height="200%"
           fill="white"
-          transform="rotate(45 512 512) translate(164 164)"
+          transform="rotate(45 256 256) translate(82 82)"
           />
       <rect
           x="92%"
@@ -273,7 +275,7 @@
           width="8%"
           height="200%"
           fill="white"
-          transform="rotate(45 512 512) translate(-164 -164)"
+          transform="rotate(45 256 256) translate(-82 -82)"
           />
       <rect
           x="46%"
