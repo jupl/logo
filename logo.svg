@@ -1,17 +1,40 @@
 <svg
     xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
     version="1.1"
     width="1024"
     height="1024"
     >
-  <!-- Theming -->
-  <style type="text/css">
-    .light { fill: white }
-    .dark { fill: black }
-    .middle { fill: gray }
-  </style>
-
   <defs>
+    <!-- Background patterns -->
+    <pattern
+        id="light-pattern"
+        patternUnits="userSpaceOnUse"
+        width="100%"
+        height="100%"
+        >
+      <rect fill="white" width="100%" height="100%" />
+      <!-- <image xlink:href="light.png" x="0" y="0" width="100%" height="100%" /> -->
+    </pattern>
+    <pattern
+        id="dark-pattern"
+        patternUnits="userSpaceOnUse"
+        width="100%"
+        height="100%"
+        >
+      <rect fill="black" width="100%" height="100%" />
+      <!-- <image xlink:href="dark.png" x="0" y="0" width="100%" height="100%" /> -->
+    </pattern>
+    <pattern
+        id="middle-pattern"
+        patternUnits="userSpaceOnUse"
+        width="100%"
+        height="100%"
+        >
+      <rect fill="gray" width="100%" height="100%" />
+      <!-- <image xlink:href="middle.png" x="0" y="0" width="100%" height="100%" /> -->
+    </pattern>
+
     <!-- Gradients for arrow -->
     <linearGradient id="light-arrow-gradient" x1="0" x2="0" y1="1" y2="0">
       <stop stop-color="black" offset="0%" />
@@ -233,22 +256,22 @@
 
   <!-- Background -->
   <rect
-      class="middle"
       width="100%"
       height="100%"
+      fill="url(#middle-pattern)"
       />
 
   <!-- Grids -->
   <rect
       width="100%"
       height="100%"
-      class="light"
+      fill="url(#light-pattern)"
       mask="url(#light-grid-mask)"
       />
   <rect
       width="100%"
       height="100%"
-      class="dark"
+      fill="url(#dark-pattern)"
       mask="url(#dark-grid-mask)"
       />
 
@@ -256,13 +279,13 @@
   <rect
       width="100%"
       height="100%"
-      class="light"
+      fill="url(#light-pattern)"
       mask="url(#light-arrow-mask)"
       />
   <rect
       width="100%"
       height="100%"
-      class="dark"
+      fill="url(#dark-pattern)"
       mask="url(#dark-arrow-mask)"
       />
 </svg>
