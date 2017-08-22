@@ -1,5 +1,17 @@
 sudo: false
+
 language: node_js
 node_js:
   - node
-script: make travis
+
+addons:
+  apt:
+    packages:
+      - libxml2-utils
+
+before_script:
+  - xmllint --version
+  - npx eclint --version
+  - npx svg2png --version
+script:
+  - make travis
