@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "eclint": "^2.4.2",
+    "svg2png": "^4.1.1"
+  }
+}

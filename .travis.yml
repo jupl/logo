@@ -1,0 +1,3 @@
+lang: node_js
+sudo: false
+script: make travis
