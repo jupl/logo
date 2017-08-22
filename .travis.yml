@@ -1,3 +1,6 @@
-lang: node_js
 sudo: false
+lang: node_js
+node_js:
+  - "node"
+
 script: make travis
