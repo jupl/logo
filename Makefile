@@ -3,12 +3,13 @@ ifdef size
 	build_args+=--width=$(size)
 endif
 
+# Base targets
 default: build
 travis: lint build
 
 # Build process
 build: clean logo.svg
-	npx svg2png logo.svg --output=logo.svg $(build_args)
+	npx svg2png logo.svg --output=logo.png $(build_args)
 clean:
 	rm -f logo.png
 
