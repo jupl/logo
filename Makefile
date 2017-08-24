@@ -23,12 +23,12 @@ travis: lint build
 build: clean logo.svg
 	cp logo.svg temp.svg
 	echo $(dark)
-	sed -i 's/fill: black/fill1/' temp.svg
-	sed -i 's/fill: white/fill2/' temp.svg
-	sed -i 's/fill: gray/fill3/' temp.svg
-	sed -i 's/fill1/fill: $(dark)/' temp.svg
-	sed -i 's/fill2/fill: $(light)/' temp.svg
-	sed -i 's/fill3/fill: $(middle)/' temp.svg
+	sed -i 's/fill: black/fill1:/' temp.svg
+	sed -i 's/fill: white/fill2:/' temp.svg
+	sed -i 's/fill: gray/fill3:/' temp.svg
+	sed -i 's/fill1:/fill: $(dark)/' temp.svg
+	sed -i 's/fill2:/fill: $(light)/' temp.svg
+	sed -i 's/fill3:/fill: $(middle)/' temp.svg
 	npx svg2png temp.svg --output=logo.png $(build_args)
 	rm temp.svg
 clean:
