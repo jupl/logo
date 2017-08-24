@@ -9,9 +9,14 @@ travis: lint build
 
 # Build process
 build: clean logo.svg
-	npx svg2png logo.svg --output=logo.png $(build_args)
+	cp logo.svg temp.svg
+	test -f dark.png && sed -i '/dark-pattern image/d' temp.svg || true
+	test -f light.png && sed -i '/light-pattern image/d' temp.svg || true
+	test -f middle.png && sed -i '/middle-pattern image/d' temp.svg || true
+	npx svg2png temp.svg --output=logo.png $(build_args)
+	rm temp.svg
 clean:
-	rm -f logo.png
+	rm -f logo.png temp.svg
 
 # Linting
 lint: eclint xmllint
