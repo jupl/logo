@@ -9,8 +9,11 @@
   <!-- Remove to show images -->
   <style type="text/css">
     #dark-pattern image { visibility: hidden }
+    #dark-pattern rect { fill: black }
     #light-pattern image { visibility: hidden }
+    #light-pattern rect { fill: white }
     #middle-pattern image { visibility: hidden }
+    #middle-pattern rect { fill: gray }
   </style>
 
   <defs>
@@ -21,7 +24,7 @@
         width="100%"
         height="100%"
         >
-      <rect fill="black" width="100%" height="100%" />
+      <rect width="100%" height="100%" />
       <image
           xlink:href="dark.png"
           x="0"
@@ -37,7 +40,7 @@
         width="100%"
         height="100%"
         >
-      <rect fill="white" width="100%" height="100%" />
+      <rect width="100%" height="100%" />
       <image
           xlink:href="light.png"
           x="0"
@@ -53,7 +56,7 @@
         width="100%"
         height="100%"
         >
-      <rect fill="gray" width="100%" height="100%" />
+      <rect width="100%" height="100%" />
       <image
           xlink:href="middle.png"
           x="0"
