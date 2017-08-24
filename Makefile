@@ -2,27 +2,18 @@
 ifdef size
 	build_args+=--width=$(size)
 endif
-ifdef dark
-	dark_color=$(dark)
-endif
-ifdef light
-	light_color=$(light)
-endif
-ifdef middle
-	middle_color=$(middle)
-endif
 ifneq ($(wildcard $(dark)),)
-	dark_color=transparent
+	override dark=transparent
 endif
 ifneq ($(wildcard $(light)),)
-	light_color=transparent
+	override light=transparent
 endif
 ifneq ($(wildcard $(middle)),)
-	middle_color=transparent
+	override middle=transparent
 endif
-dark_color?=black
-light_color?=white
-middle_color?=gray
+dark?=black
+light?=white
+middle?=gray
 
 # Base targets
 default: build
@@ -35,9 +26,9 @@ build: clean logo.svg
 	sed -i 's/fill: black/fill: 1/' temp.svg
 	sed -i 's/fill: white/fill: 2/' temp.svg
 	sed -i 's/fill: gray/fill: 3/' temp.svg
-	sed -i 's/fill: 1/fill: $(dark_color)/' temp.svg
-	sed -i 's/fill: 2/fill: $(light_color)/' temp.svg
-	sed -i 's/fill: 3/fill: $(middle_color)/' temp.svg
+	sed -i 's/fill: 1/fill: $(dark)/' temp.svg
+	sed -i 's/fill: 2/fill: $(light)/' temp.svg
+	sed -i 's/fill: 3/fill: $(middle)/' temp.svg
 	npx svg2png temp.svg --output=logo.png $(build_args)
 	rm temp.svg
 clean:
