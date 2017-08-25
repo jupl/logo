@@ -66,7 +66,7 @@
 
     <!-- Gradients for arrow -->
     <linearGradient id="dark-arrow-gradient-1" x1="0" x2="1" y1="0" y2="0">
-      <stop stop-color="white" offset="66%" />
+      <stop stop-color="white" offset="50%" />
       <stop stop-color="black" offset="84%" />
     </linearGradient>
     <linearGradient id="dark-arrow-gradient-2" x1="0" x2="0" y1="0" y2="1">
@@ -74,7 +74,7 @@
       <stop stop-color="black" offset="100%" />
     </linearGradient>
     <linearGradient id="light-arrow-gradient-1" x1="0" x2="0" y1="1" y2="0">
-      <stop stop-color="white" offset="66%" />
+      <stop stop-color="white" offset="50%" />
       <stop stop-color="black" offset="84%" />
     </linearGradient>
     <linearGradient id="light-arrow-gradient-2" x1="1" x2="0" y1="0" y2="0">
