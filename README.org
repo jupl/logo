@@ -1,5 +1,5 @@
 #+BEGIN_CENTER
 [[https://travis-ci.org/jupl/logo][file:https://img.shields.io/travis/jupl/logo/master.svg?label=travis&style=flat-square]]
 -----
-[[./logo.svg]]
+[[logo.svg]]
 #+END_CENTER
