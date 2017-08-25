@@ -1,5 +1,5 @@
-#+BEGIN_CENTER
+#+ATTR_HTML: :style margin-left: auto; margin-right: auto;
 [[https://travis-ci.org/jupl/logo][file:https://img.shields.io/travis/jupl/logo/master.svg?label=travis&style=flat-square]]
 -----
-[[logo.svg][file:logo.svg]]
-#+END_CENTER
+#+ATTR_HTML: :style margin-left: auto; margin-right: auto;
+[[https://rawgit.com/jupl/logo/master/logo.svg]]
