@@ -1,7 +1,4 @@
 # Variables
-ifdef size
-	build_args+=--width=$(size)
-endif
 ifdef dark
 	dark_color=$(dark)
 endif
@@ -20,6 +17,7 @@ endif
 ifneq ($(wildcard $(middle)),)
 	middle_color=transparent
 endif
+size?=1000
 dark_color?=black
 light_color?=white
 middle_color?=gray
@@ -43,7 +41,7 @@ build: clean logo.svg
 	sed -i 's/:image1:/$(dark)/' temp.svg
 	sed -i 's/:image2:/$(light)/' temp.svg
 	sed -i 's/:image3:/$(middle)/' temp.svg
-	npx svg2png temp.svg --output=logo.png $(build_args)
+	npx svg2png temp.svg --output=logo.png --width=$(size)
 	rm temp.svg
 clean:
 	rm -f logo.png temp.svg
