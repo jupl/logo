@@ -1,3 +1,3 @@
 [[https://travis-ci.org/jupl/logo][file:https://img.shields.io/travis/jupl/logo/master.svg?label=travis&style=flat-square]]
 
-[[logo.svg][file:https://github.com/jupl/logo/raw/master/logo.svg]]
+[[logo.svg][file:https://rawgit.com/jupl/logo/master/logo.svg]]
